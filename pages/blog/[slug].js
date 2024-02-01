@@ -156,7 +156,7 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      textReq: testReq.data,
+      textReq: testReq,
       id: '123'
     }
   }
