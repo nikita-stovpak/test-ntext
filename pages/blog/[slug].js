@@ -151,7 +151,9 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   // By returning { props: { posts } }, the Blog component
   // will receive `posts` as a prop at build time
-  const testReq = await axios.get('https://httpbin.org/get');
+  // const testReq = await axios.get('https://httpbin.org/get');
+  const testReq = {}
+
   return {
     props: {
       textReq: testReq.data,
