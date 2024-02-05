@@ -135,19 +135,19 @@ export default function Page({ id }) {
 }
 
 // This function gets called at build time
-export async function getStaticPaths() {
-  const array = Array.from(Array(100001).keys());
-  const paths = array.map((i) => {
-    return ({
-      params: {
-        slug: `test${i}`
-      }})
-  });
-
-  // We'll pre-render only these paths at build time.
-  // { fallback: false } means other routes should 404.
-  return { paths, fallback: false }
-}
+// export async function getStaticPaths() {
+//   const array = Array.from(Array(100001).keys());
+//   const paths = array.map((i) => {
+//     return ({
+//       params: {
+//         slug: `test${i}`
+//       }})
+//   });
+//
+//   // We'll pre-render only these paths at build time.
+//   // { fallback: false } means other routes should 404.
+//   return { paths, fallback: false }
+// }
 export async function getServerSideProps(context) {
   const testReq = await axios.get('https://httpbin.org/get');
   // const testReq = {}
