@@ -3,7 +3,7 @@ import axios from 'axios';
 import styles from "../../styles/Home.module.css";
 import Head from "next/head";
 
-export default function Page({ id }) {
+export default function Page(props) {
   const router = useRouter()
   return (
     <div className={styles.container}>
@@ -154,7 +154,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      textReq: testReq,
+      // textReq: testReq,
       id: '123'
     }
   }
